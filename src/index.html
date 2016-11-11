@@ -1,0 +1,25 @@
+<!doctype html>
+<html style="margin: 0 auto;">
+<head>
+  <meta charset="utf-8">
+  <title>RentWithFriends</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body style="margin: 0 auto";>
+  <div id="fb-root"></div>
+  <script src="//connect.facebook.net/en_US/sdk.js"></script>
+  <script>
+    FB.init({
+      appId      : '1761395224115205',
+      cookie     : false,  // enable cookies to allow the server to access 
+                          // the session
+      xfbml      : true,  // parse social plugins on this page
+      version    : 'v2.7' // use graph api version 2.5
+    });
+  </script>
+  <app-root>Loading...</app-root>
+</body>
+</html>
