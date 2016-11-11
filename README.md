@@ -10,5 +10,5 @@ Facebook is loaded in index.html for performance reasons.
 
 To run this project:
 
-1. Make sure to go to index.html and change the FB APP ID to your APP ID.
+1. Make sure to go to src/index.html and change the FB APP ID to your APP ID.
 2. npm start in cmd when in the directory.
