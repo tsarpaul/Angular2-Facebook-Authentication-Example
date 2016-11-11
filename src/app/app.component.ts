@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
   providers: []
 })
 export class AppComponent implements OnInit {
-  title = 'Rent with Friends!';
+  title = 'Angular 2 Facebook Authentication Example!';
 
   constructor() {
   }
