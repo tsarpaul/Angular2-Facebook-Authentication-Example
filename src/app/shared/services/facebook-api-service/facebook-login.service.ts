@@ -18,9 +18,7 @@ export class FacebookLoginService {
   login() {
     let userManagementRef = this.userManagementService;
     FB.login(function (Response) {
-      if (Response['status'] === 'connected' && Response['authResponse']) {
         userManagementRef.login();
-      }
     });
   }
 }
