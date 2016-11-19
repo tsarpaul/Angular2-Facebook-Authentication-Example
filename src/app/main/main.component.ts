@@ -20,11 +20,6 @@ export class MainComponent implements OnInit {
     let userManagementServiceRef = this.userManagementService;
     FB.logout(function (response) {
       userManagementServiceRef.logout();
-      var cookies = document.cookie.split(";");
-      for (var i = 0; i < cookies.length; i++) {
-        if (cookies[i].split("=")[0].indexOf("fblo_") != -1)
-          document.cookie = cookies[i].split("=")[0] + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT; path=/';
-      }
     });
   }
 }
