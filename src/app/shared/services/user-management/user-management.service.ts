@@ -35,7 +35,14 @@ export class UserManagementService {
   logout() {
     this.pushChanges();
     this.user$.subscribe(isLogged => {
-      if (!isLogged) this._router.navigate(['login']);
+      if (!isLogged) {
+        var cookies = document.cookie.split(";");
+        for (var i = 0; i < cookies.length; i++) {
+          if (cookies[i].split("=")[0].indexOf("fblo_") != -1)
+            document.cookie = cookies[i].split("=")[0] + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT; path=/';
+        }
+        this._router.navigate(['login']);
+      }
     }),
       err => console.log(err);
   }
